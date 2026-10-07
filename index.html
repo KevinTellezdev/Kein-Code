@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kein Code — Desarrollo Web Moderno en Colombia</title>
+  <meta name="description" content="Kein Code: desarrollo web profesional en Colombia. Páginas web modernas, rápidas y optimizadas que convierten visitas en clientes. HTML, CSS, JS, React.">
+  <meta name="keywords" content="desarrollo web Colombia, páginas web profesionales, diseño web, Kein Code, web developer Colombia, landing page">
+  <meta name="author" content="Kein Code">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Kein Code — Desarrollo Web Profesional en Colombia">
+  <meta property="og:description" content="Diseño moderno, código limpio y resultados reales para tu negocio. Páginas web que convierten.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kein Code — Desarrollo Web">
+  <meta name="twitter:description" content="Páginas web modernas y profesionales en Colombia.">
+  <link rel="canonical" href="https://keincode.com">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js" defer></script>
+</head>
+<body>
+
+  <!-- CURSOR PERSONALIZADO -->
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="images/logo.png" alt="Kein Code Logo" class="nav-logo-img">
+      Kein <span>Code</span>
+    </a>
+    <a href="mailto:keincodedev@gmail.com" class="nav-email">keincodedev@gmail.com</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#home" class="active nav-home-only">Inicio</a>
+        <a href="#about">Sobre Mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SOCIALES FIJOS PARA TODA LA PÁGINA -->
+  <div class="hero-socials">
+    <a href="https://github.com/KevinTellezdev" target="_blank" rel="noopener noreferrer" title="GitHub">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#fff" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+    </a>
+    <a href="www.linkedin.com/in/ingkevintellez" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#fff" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM.22 8.25H4.8V23H.22V8.25zM8.36 8.25h4.38v2.01h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 6.99V23h-4.57v-6.91c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.66 1.8-2.66 3.65V23H8.36V8.25z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@keincodestudio" target="_blank" rel="noopener noreferrer" title="TikTok">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#fff" d="M16.5 2c.3 2.1 1.6 3.9 3.5 4.7v3a7.3 7.3 0 01-3.5-.9v6.7c0 3.6-2.9 6.5-6.5 6.5S3.5 19.1 3.5 15.5 6.4 9 10 9c.3 0 .6 0 .9.1v3.1a3.5 3.5 0 100 6.8c1.9 0 3.4-1.5 3.4-3.4V2h2.2z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/daviddeving?stkn=MW5tMjl4NHQ5bjdvag==" target="_blank" rel="noopener noreferrer" title="Instagram">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"/></svg>
+    </a>
+  </div>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero">
+      <div class="hero-inner">
+
+        <div class="hero-text">
+          <div class="hero-badge split-text">Ingeniería y desarrollo web</div>
+          <h1 class="glitch-target" data-text="Desarrollo Web">
+            Desarrollo Web<br>
+            <span class="accent">Moderno &amp; Profesional</span>
+          </h1>
+          <p class="hero-sub">
+            <span id="typing-text"></span><span id="cursor">|</span>
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">Ver Proyectos</a>
+            <a href="#contact" class="btn-outline">Contáctame</a>
+          </div>
+          <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-hint-line"></div>
+          </div>
+        </div>
+
+        <!-- AVATAR -->
+        <div class="hero-visual">
+          <div class="avatar-wrap" id="avatar-wrap">
+            <div class="avatar-glow"></div>
+            <img src="images/avatar.png" alt="Avatar Kein Code" class="avatar-img">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-tag reveal">Sobre Mí</div>
+      <h2 class="section-title reveal">Habilidades &amp;<br>Tecnologías</h2>
+      <div class="title-line reveal"></div>
+      <div class="about-grid">
+        <div class="about-card reveal" style="--delay:0ms">
+          <div class="about-card-icon">⚡</div>
+          <h3>Desarrollo Rápido</h3>
+          <p>Entrego páginas web funcionales y optimizadas en tiempo récord sin sacrificar calidad ni diseño.</p>
+        </div>
+        <div class="about-card reveal" style="--delay:100ms">
+          <div class="about-card-icon">🎨</div>
+          <h3>Diseño que Convierte</h3>
+          <p>Cada pixel tiene un propósito. Diseño interfaces que guían al usuario hacia la acción que tu negocio necesita.</p>
+        </div>
+        <div class="about-card reveal" style="--delay:200ms">
+          <div class="about-card-icon">📱</div>
+          <h3>100% Responsive</h3>
+          <p>Tu web se ve perfecta en cualquier dispositivo. Mobile-first es el estándar, no una opción.</p>
+        </div>
+      </div>
+
+      <!-- MY STACK — ESFERAS 3D CON FÍSICA -->
+      <div class="stack-section reveal">
+        <div class="skills-title">Mi Stack Tecnológico</div>
+        <div class="skills-line"></div>
+        <div class="stack-3d-wrap" id="stack-3d-wrap">
+          <canvas id="stack-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-tag reveal">Portafolio</div>
+      <h2 class="section-title reveal">Proyectos</h2>
+      <div class="title-line reveal"></div>
+
+      <!-- FILTROS -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="html">HTML / CSS</button>
+        <button class="filter-btn" data-filter="js">JavaScript</button>
+        <button class="filter-btn" data-filter="react">React</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Proyecto 1: Nivaltrade -->
+        <a href="https://nivaltradesas.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card" data-tags="html,js">
+          <div class="project-img-wrap">
+            <div class="project-iframe-frame"><iframe src="https://nivaltradesas.netlify.app/" loading="lazy" tabindex="-1" title="Nivaltrade S.A.S" scrolling="no"></iframe></div>
+            <div class="project-img-overlay"><span>Ver proyecto →</span></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span></div>
+            <h3>Nivaltrade S.A.S</h3>
+            <p>Web corporativa para empresa de transporte. Responsive y optimizada para SEO.</p>
+            <div class="project-link">Ver proyecto →</div>
+          </div>
+        </a>
+
+        <!-- Proyecto 2: SERTECOM -->
+        <a href="https://sertecom.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card" data-tags="html,js">
+          <div class="project-img-wrap">
+            <div class="project-iframe-frame"><iframe src="https://sertecom.netlify.app/" loading="lazy" tabindex="-1" title="SERTECOM" scrolling="no"></iframe></div>
+            <div class="project-img-overlay"><span>Ver proyecto →</span></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span></div>
+            <h3>SERTECOM</h3>
+            <p>Landing para empresa tech en Zipaquirá. Diseño oscuro con integración WhatsApp.</p>
+            <div class="project-link">Ver proyecto →</div>
+          </div>
+        </a>
+
+        <!-- Proyecto 3: Empresa de Aseo -->
+        <div class="project-card" data-tags="html,js">
+          <div class="project-img-wrap"><div class="project-img-placeholder">🧹</div></div>
+          <div class="project-body">
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span></div>
+            <h3>Empresa de Aseo</h3>
+            <p>Sitio web para empresa de limpieza. Catálogo de servicios y botón WhatsApp.</p>
+            <div class="project-link">En desarrollo →</div>
+          </div>
+        </div>
+
+        <!-- Proyecto 4: E-commerce placeholder -->
+        <div class="project-card project-hidden" data-tags="react">
+          <div class="project-img-wrap"><div class="project-img-placeholder">🛒</div></div>
+          <div class="project-body">
+            <div class="project-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span></div>
+            <h3>Tienda Online</h3>
+            <p>E-commerce con carrito, pasarela de pagos y panel de administración.</p>
+            <div class="project-link">Próximamente →</div>
+          </div>
+        </div>
+
+        <!-- Proyecto 5: Dashboard placeholder -->
+        <div class="project-card project-hidden" data-tags="react,js">
+          <div class="project-img-wrap"><div class="project-img-placeholder">📊</div></div>
+          <div class="project-body">
+            <div class="project-tags"><span class="project-tag">React</span><span class="project-tag">MySQL</span></div>
+            <h3>Dashboard Admin</h3>
+            <p>Panel de control con gráficas, gestión de usuarios y reportes en tiempo real.</p>
+            <div class="project-link">Próximamente →</div>
+          </div>
+        </div>
+
+        <!-- Proyecto 6: CTA -->
+        <div class="project-card project-hidden dashed-card" data-tags="all">
+          <div class="project-img-wrap"><div class="project-img-placeholder">✨</div></div>
+          <div class="project-body">
+            <div class="project-tags"><span class="project-tag">Tu idea</span></div>
+            <h3>Tu proyecto aquí</h3>
+            <p>¿Tienes una idea? Construyamos juntos tu presencia digital.</p>
+            <div class="project-link">Contáctame →</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VER MÁS -->
+      <div class="ver-mas-wrap">
+        <button class="ver-mas-btn" id="ver-mas-btn" onclick="toggleProjects()">
+          <span id="ver-mas-text">Ver más proyectos</span>
+          <svg id="ver-mas-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESO (nueva sección) -->
+  <section id="process">
+    <div class="section-inner">
+      <div class="section-tag reveal">Cómo Trabajo</div>
+      <h2 class="section-title reveal">El Proceso</h2>
+      <div class="title-line reveal"></div>
+
+      <div class="process-timeline reveal">
+        <!-- SVG línea animada -->
+        <svg class="process-svg" viewBox="0 0 900 10" preserveAspectRatio="none">
+          <line id="process-line" x1="0" y1="5" x2="900" y2="5" stroke="#ff0033" stroke-width="2" stroke-dasharray="900" stroke-dashoffset="900"/>
+        </svg>
+
+        <div class="process-steps">
+          <div class="process-step" data-step="1">
+            <div class="step-circle">
+              <span class="step-num">01</span>
+            </div>
+            <div class="step-content">
+              <h3>Consulta</h3>
+              <p>Me contás tu idea, tu negocio y qué necesitás. Sin costo, sin compromisos.</p>
+            </div>
+          </div>
+          <div class="process-step" data-step="2">
+            <div class="step-circle">
+              <span class="step-num">02</span>
+            </div>
+            <div class="step-content">
+              <h3>Diseño</h3>
+              <p>Creo el boceto visual de tu web. Lo revisamos juntos hasta que quede perfecto.</p>
+            </div>
+          </div>
+          <div class="process-step" data-step="3">
+            <div class="step-circle">
+              <span class="step-num">03</span>
+            </div>
+            <div class="step-content">
+              <h3>Desarrollo</h3>
+              <p>Codifico tu web con las mejores tecnologías. Responsive, rápida y optimizada.</p>
+            </div>
+          </div>
+          <div class="process-step" data-step="4">
+            <div class="step-circle">
+              <span class="step-num">04</span>
+            </div>
+            <div class="step-content">
+              <h3>Entrega</h3>
+              <p>Tu web en vivo con dominio, hosting y soporte post-lanzamiento incluido.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="contact-inner">
+        <div class="contact-left reveal-left">
+          <div class="section-tag">Contacto</div>
+          <h2 class="section-title">Trabajemos<br>Juntos</h2>
+          <div class="title-line"></div>
+          <p>¿Quieres una página web profesional para tu negocio? Cuéntame tu idea y te doy una propuesta sin costo.</p>
+        </div>
+        <div class="contact-form reveal-right">
+          <div class="form-group">
+            <input type="text" id="form-name" placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <input type="email" id="form-email" placeholder="Tu correo electrónico">
+          </div>
+          <div class="form-group">
+            <input type="text" id="form-subject" placeholder="Asunto">
+          </div>
+          <div class="form-group">
+            <textarea id="form-msg" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+          </div>
+          <button class="btn-send" onclick="sendWA()">Enviar por WhatsApp 🚀</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer><span>Kein Code</span> &copy; 2026</footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/573243965891?text=Hola%20quiero%20una%20página%20web" target="_blank" rel="noopener noreferrer" class="wa-float" title="WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+      <path fill="#fff" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.2.6 4.4 1.7 6.3L3 29l7.2-1.9c1.8 1 3.7 1.5 5.8 1.5 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm6.5 17.4c-.3.8-1.5 1.5-2.1 1.6-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.3-5.1-4.5-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.6l-.4.5c-.1.1-.3.3-.1.6.7 1.2 1.5 2 2.6 2.6.3.2.5 0 .6-.1l.5-.6c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.4z"/>
+    </svg>
+  </a>
+
+  <script src="js/script.js"></script>
+  <script src="js/stack-3d.js" defer></script>
+</body>
+</html>
